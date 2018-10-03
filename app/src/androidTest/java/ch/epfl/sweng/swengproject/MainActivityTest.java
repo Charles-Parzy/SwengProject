@@ -20,6 +20,10 @@ public class MainActivityTest {
     @Rule
     public final ActivityTestRule<MainActivity> mActivityRule =
             new ActivityTestRule<>(MainActivity.class);
+
+    /**
+     * Test greet users
+     */
     @Test
     public void testCanGreetUsers() {
         onView(withId(R.id.mainName)).perform(typeText("from my unit test")).perform(closeSoftKeyboard());
